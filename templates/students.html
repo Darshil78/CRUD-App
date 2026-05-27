@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='dashboard.css') }}">
+
+<div class="table-card">
+
+    <div class="table-header">
+
+        <div>
+            <h2>All Students</h2>
+            <p style="color:gray; margin-top:5px;">
+                Manage student records easily
+            </p>
+        </div>
+
+        <a href="/add" class="add-btn">
+            <i class="fa-solid fa-user-plus"></i>
+            Add Student
+        </a>
+
+    </div>
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:20px;
+    ">
+
+        <input type="text"
+        class="search-box"
+        placeholder="Search students...">
+
+        <h4 style="color:#6b7280;">
+            Total Students :
+            {{ students|length }}
+        </h4>
+
+    </div>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for student in students %}
+        <tr>
+
+            <td>{{ student.id }}</td>
+
+            <td>
+                <div style="
+                    display:flex;
+                    align-items:center;
+                    gap:10px;
+                ">
+
+                    <div style="
+                        width:40px;
+                        height:40px;
+                        border-radius:50%;
+                        background:#2563eb;
+                        color:white;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        font-weight:600;
+                    ">
+                        {{ student.name[0] }}
+                    </div>
+
+                    {{ student.name }}
+
+                </div>
+            </td>
+
+            <td>{{ student.email }}</td>
+
+            <td>
+                <span style="
+                    background:#dbeafe;
+                    color:#2563eb;
+                    padding:8px 12px;
+                    border-radius:20px;
+                    font-size:14px;
+                ">
+                    {{ student.course }}
+                </span>
+            </td>
+
+            <td>
+
+                <a href="/edit/{{ student.id }}"
+                class="action-btn edit-btn">
+
+                    <i class="fa-solid fa-pen"></i>
+                    Edit
+
+                </a>
+
+                <a href="/delete/{{ student.id }}"
+                class="action-btn delete-btn">
+
+                    <i class="fa-solid fa-trash"></i>
+                    Delete
+
+                </a>
+
+            </td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}

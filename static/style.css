@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f4f7fe;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #111827;
+    padding: 25px;
+    position: fixed;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* MAIN */
+
+.main-content {
+    margin-left: 250px;
+    width: 100%;
+    padding: 30px;
+}
+
+.topbar {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+
+/* CARDS */
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: #2563eb;
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.action-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: #10b981;
+}
+
+.delete-btn {
+    background: #ef4444;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+}
+
+.btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
