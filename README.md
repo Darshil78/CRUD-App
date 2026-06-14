@@ -1,4 +1,4 @@
-# CRUD Flask App
+# CRUD App
 
 A simple Flask-based CRUD application for managing student records with user registration and login.
 
